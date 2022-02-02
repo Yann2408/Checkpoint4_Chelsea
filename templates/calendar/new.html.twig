@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Calendar{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="/assets/css/formCalendar.css">
+{% endblock %}
+
+{% block body %}
+    <h1>Create a new meet</h1>
+
+    {{ include('calendar/_form.html.twig') }}
+
+    <a href="{{ path('calendar_index') }}">back to list</a>
+{% endblock %}

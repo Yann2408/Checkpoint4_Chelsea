@@ -1,0 +1,68 @@
+h1 {
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--main-blue);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+}
+
+label {
+    color: white;
+    
+}
+
+input {
+    margin-top: 10px;
+    height: 20px;
+}
+
+.inputTitre {
+    width: 200px;
+    margin-bottom: 10px;
+}
+
+textarea {
+    margin-top: 10px;
+    width: 400px;
+    height: 200px;
+}
+
+.date, .color, .backgroundColor, .texteColor {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 10px;
+    width: 400px;
+}
+
+.debut, .fin, .backgroundColor, .texteColor {
+    display: flex;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+}
+
+select {
+    margin-top: 5px;
+}
+
+.backgroundColor, .texteColor {
+    display: flex;
+    align-items: center;
+}
+
+.btn {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 200px;
+    height: 30px;
+    background-color: white;
+}

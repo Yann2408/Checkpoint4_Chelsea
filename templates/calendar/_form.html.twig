@@ -1,0 +1,75 @@
+{{ form_start(form) }}
+<div class="container">
+    <div class="member-label">
+        {{ form_label(form.title) }}
+    </div>
+    <div>
+        {{ form_widget(form.title, {'attr': {'class': 'inputTitre'}}) }} 
+    </div>
+    <div class="form-error">
+        {{ form_errors(form.title) }}
+    </div>
+
+    <div class="member-label">
+        {{ form_label(form.description) }}
+    </div>
+    <div>
+        {{ form_widget(form.description, {'attr': {'class': 'widget'}}) }} 
+    </div>
+    <div class="form-error">
+        {{ form_errors(form.description) }}
+    </div>
+
+    <div class="date">
+        <div class="debut">
+            <div class="member-label">
+                {{ form_label(form.start) }}
+            </div>
+            <div>
+                {{ form_widget(form.start, {'attr': {'class': 'widget'}}) }} 
+            </div>
+            <div class="form-error">
+                {{ form_errors(form.start) }}
+            </div>
+        </div>
+
+        <div class="fin">
+            <div class="member-label">
+            {{ form_label(form.end) }}
+            </div>
+            <div>
+                {{ form_widget(form.end, {'attr': {'class': 'widget'}}) }} 
+            </div>
+            <div class="form-error">
+                {{ form_errors(form.end) }}
+            </div>
+        </div>
+    </div>
+
+    <div class="color">
+        <div class="backgroundColor">
+            <div class="member-label">
+            {{ form_label(form.backgroundColor) }}
+            </div>
+            <div>
+                {{ form_widget(form.backgroundColor, {'attr': {'class': 'widget'}}) }} 
+            </div>
+            <div class="form-error">
+                {{ form_errors(form.backgroundColor) }}
+            </div>
+        </div>
+        <div class="texteColor">
+            <div class="member-label">
+            {{ form_label(form.textColor) }}
+            </div>
+            <div>
+                {{ form_widget(form.textColor, {'attr': {'class': 'widget'}}) }} 
+            </div>
+            <div class="form-error">
+                {{ form_errors(form.textColor) }}
+            </div>
+        </div>
+    </div>
+    <button class="btn">{{ button_label|default('Add') }}</button>
+</div>
+{{ form_end(form) }}
