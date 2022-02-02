@@ -13,7 +13,7 @@
             </tr>
             <tr>
                 <th>Titre</th>
-                <td>{{ calendar.titre }}</td>
+                <td>{{ calendar.title }}</td>
             </tr>
             <tr>
                 <th>Description</th>
@@ -21,11 +21,11 @@
             </tr>
             <tr>
                 <th>Debut</th>
-                <td>{{ calendar.debut ? calendar.debut|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ calendar.start ? calendar.start|date('Y-m-d H:i:s') : '' }}</td>
             </tr>
             <tr>
                 <th>Fin</th>
-                <td>{{ calendar.fin ? calendar.fin|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ calendar.end ? calendar.end|date('Y-m-d H:i:s') : '' }}</td>
             </tr>
             <tr>
                 <th>BackgroundColor</th>
@@ -33,7 +33,7 @@
             </tr>
             <tr>
                 <th>TexteColor</th>
-                <td>{{ calendar.texteColor }}</td>
+                <td>{{ calendar.textColor }}</td>
             </tr>
         </tbody>
     </table>

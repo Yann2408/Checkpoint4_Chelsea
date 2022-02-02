@@ -64,5 +64,28 @@ select {
     margin-bottom: 20px;
     width: 200px;
     height: 30px;
+    background-color: var(--main-blue);
+    border: 1px solid white;
+    color: white;
+
+}
+
+.btn:hover {
     background-color: white;
+    color: var(--main-blue);
+}
+
+.btnBack {
+    background-color: white;
+    width: 200px;
+    height: 30px;
+    margin-top: 20px;
+    margin-left: 20%;
+    margin-bottom: 20px;
+    border: 1px solid var(--main-blue);
+}
+
+.btnBack:hover {
+    background-color: var(--main-blue);
+    color: white
 }

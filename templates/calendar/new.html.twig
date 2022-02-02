@@ -7,9 +7,9 @@
 {% endblock %}
 
 {% block body %}
-    <h1>Create a new meet</h1>
+    <h1>Create a new event </h1>
 
     {{ include('calendar/_form.html.twig') }}
 
-    <a href="{{ path('calendar_index') }}">back to list</a>
+    <a href="{{ path('calendar_index') }}"><button class="btnBack">back to list</button></a>
 {% endblock %}

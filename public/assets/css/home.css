@@ -11,9 +11,15 @@
 .btn {
     width: 200px;
     height: 40px;
-    background-color: var(--main-blue);
+    background-color: white;
     margin-top: 20px;
     margin-bottom: 20px;
+    color: var(--main-blue);
+    border: 1px solid var(--main-blue)
+}
+
+.btn:hover {
+    background-color: var(--main-blue);
     color: white;
 }
 

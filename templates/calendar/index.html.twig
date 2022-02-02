@@ -2,10 +2,41 @@
 
 {% block title %}Calendar index{% endblock %}
 
-{% block body %}
-    <h1>Calendar index</h1>
+{% block stylesheets %}
+    <link rel="stylesheet" href="/assets/css/indexMeetings.css">
+{% endblock %}
 
-    <table class="table">
+{% block body %}
+    <h1>Meeting index</h1>
+    <div class="container">
+        <div class="titreIndex">
+            <div class="action">Action</div>
+            <div class="title">Title</div>
+            <div class="start">Start</div>
+            <div class="end">End</div>
+            <div class="description">Description</div>
+        </div>
+        {% for calendar in calendars %}
+        <div class="infos">
+            <div class="action">
+            <a class="lienEdit" href="{{ path('calendar_edit', {'id': calendar.id}) }}"><i class="fas fa-edit"></i></a>
+            {{ include('calendar/_delete_form.html.twig') }}
+            <a class="lienEdit" href="{{ path('calendar_delete', {'id': calendar.id}) }}"><i class="fas fa-trash"></i></a>
+            </div>
+            <div class="title">{{ calendar.title }}</div>
+            <div class="start">{{ calendar.start ? calendar.start|date('Y-m-d H:i:s') : '' }}</div>
+            <div class="end">{{ calendar.end ? calendar.end|date('Y-m-d H:i:s') : '' }}</div>
+            <div class="description">{{ calendar.description }}</div>
+        </div>
+        {% else %}
+            <p colspan="8">You have no meeting</p>
+        {% endfor %}
+    </div>
+{% endblock %}
+
+
+
+    {# <table class="table">
         <thead>
             <tr>
                 <th>Id</th>
@@ -35,11 +66,11 @@
             </tr>
         {% else %}
             <tr>
-                <td colspan="8">no records found</td>
+                <td colspan="8">You have no meeting</td>
             </tr>
         {% endfor %}
         </tbody>
     </table>
 
     <a href="{{ path('calendar_new') }}">Create new</a>
-{% endblock %}
+{% endblock %} #}
