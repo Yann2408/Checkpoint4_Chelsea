@@ -1,0 +1,34 @@
+{{ form_start(form) }}
+    <div class="container">
+        <div class="member-label">
+        {{ form_label(form.nom) }}
+        </div>
+        <div>
+            {{ form_widget(form.nom, {'attr': {'class': 'inputNom'}}) }} 
+        </div>
+        <div class="form-error">
+            {{ form_errors(form.nom) }}
+        </div>
+
+        <div class="member-label">
+            {{ form_label(form.categorie) }}
+        </div>
+        <div>
+            {{ form_widget(form.categorie, {'attr': {'class': 'inputCategorie'}}) }} 
+        </div>
+        <div class="form-error">
+            {{ form_errors(form.categorie) }}
+        </div>
+
+        <div class="member-label">
+            {{ form_label(form.description) }}
+        </div>
+        <div>
+            {{ form_widget(form.description, {'attr': {'class': 'widget'}}) }} 
+        </div>
+        <div class="form-error">
+            {{ form_errors(form.description) }}
+        </div>
+    <button class="btn">{{ button_label|default('Add') }}</button>
+    </div>
+{{ form_end(form) }}

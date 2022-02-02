@@ -20,6 +20,7 @@ label {
 
 input {
     margin-top: 10px;
+    margin-bottom: 15px;
     height: 20px;
 }
 
@@ -28,34 +29,17 @@ input {
     margin-bottom: 10px;
 }
 
+select {
+    margin-top: 10px;
+    margin-bottom: 15px;
+    width: 150px;
+    height: 25px;
+}
+
 textarea {
     margin-top: 10px;
     width: 400px;
     height: 200px;
-}
-
-.date, .color, .backgroundColor, .texteColor {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin-top: 10px;
-    width: 400px;
-}
-
-.debut, .fin, .backgroundColor, .texteColor {
-    display: flex;
-    flex-direction: column;
-    display: flex;
-    align-items: center;
-}
-
-select {
-    margin-top: 5px;
-}
-
-.backgroundColor, .texteColor {
-    display: flex;
-    align-items: center;
 }
 
 .btn {

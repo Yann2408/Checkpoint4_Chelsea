@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Atelier{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="/assets/css/formAtelier.css">
+{% endblock %}
+
+{% block body %}
+    <h1>Create a new workshop</h1>
+
+    {{ include('atelier/_form.html.twig') }}
+
+    <a href="{{ path('atelier_index') }}"><button class="btnBack">back to list</button></a>
+{% endblock %}

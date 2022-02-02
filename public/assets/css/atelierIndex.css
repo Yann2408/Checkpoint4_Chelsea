@@ -3,6 +3,21 @@ h1 {
     justify-content: center;
 }
 
+.btn {
+    background-color: white;
+    width: 200px;
+    height: 30px;
+    margin-top: 10px;
+    margin-left: 5%;
+    margin-bottom: 10px;
+    border: 1px solid var(--main-blue);
+}
+
+.btn:hover {
+    background-color: var(--main-blue);
+    color: white
+}
+
 .container {
     display: flex;
     flex-direction: column;
@@ -27,23 +42,16 @@ h1 {
     flex-direction: row;
     padding-left: 10px;
     gap: 10%;
-    display: flex;
     align-items: center;
 }
 
-.title {
+.name {
     width: 20%;
     display: flex;
     align-items: center;
 }
 
-.start {
-    width: 20%;
-    display: flex;
-    align-items: center;
-}
-
-.end {
+.category {
     width: 20%;
     display: flex;
     align-items: center;
