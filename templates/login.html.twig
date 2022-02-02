@@ -1,0 +1,36 @@
+
+{% block title %}{% endblock %}
+
+<script src="https://kit.fontawesome.com/ce1160e1b3.js" crossorigin="anonymous"></script>
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="/assets/css/login.css">
+    <link rel="stylesheet" href="/assets/css/variables.css">
+{% endblock %}
+
+{% block body %}
+
+    <img class="logo" src="/uploads/Logo_Chelsea.png" alt="Logo de Chelsea">
+
+    <div class="container">
+        <div><i class="fas fa-user-tie"></i></div>
+        <form action="{{ path('login') }}" method="post">
+            <div class="name">
+                <label for="username">Name:</label>
+                <input type="text" id="username" name="_username" value="{{ last_username }}"/>
+            </div>
+            <div class="mdp">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="_password"/>
+            </div>
+            {# If you want to control the URL the user is redirected to on success #}
+            {# <input type="hidden" name="_target_path" value="/account"/> #}
+
+            <button class="btn" type="submit">login</button>
+            {% if error %}
+                <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+            {% endif %}
+        </form>
+    </div>
+ 
+{% endblock %}
