@@ -1,0 +1,75 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="/assets/css/joueurIndex.css">
+{% endblock %}
+
+{% block body %}
+    <a href="{{ path('joueur_new') }}"><button class="btn">Add a player</button></a>
+    <a href="{{ path('joueur_new') }}"><button class="btn btnChooseTeam">Choose your team</button></a>
+     <div class="container">
+        <div class="titreIndex">
+            <div class="action">Action</div>
+            <div class="name">Name</div>
+            <div class="age">Age</div>
+            <div class="nationality">Nationality</div>
+            <div class="position">Position</div>
+        </div>
+
+        {% for joueur in joueurs %}
+        <div class="infos">
+            <div class="action">
+            <a class="lienEdit" href="{{ path('joueur_edit', {'id': joueur.id}) }}"><i class="fas fa-edit"></i></a>
+            {{ include('joueur/_delete_form.html.twig') }}
+            <a class="lienEdit" href="{{ path('joueur_delete', {'id': joueur.id}) }}"><i class="fas fa-trash"></i></a>
+            </div>
+            <div class="name">{{ joueur.prenom }} {{ joueur.nom }}</div>
+            <div class="age">{{ joueur.age }}</div>
+            <div class="nationality">{{ joueur.nationalite }}</div>
+            <div class="position">{{ joueur.poste }}</div>
+        </div>
+        {% else %}
+            <p colspan="8">You have no workshop</p>
+        {% endfor %}
+{% endblock %}
+    {# <h1>Players</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nom</th>
+                <th>Prenom</th>
+                <th>Age</th>
+                <th>Nationalite</th>
+                <th>Poste</th>
+                <th>Statut</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for joueur in joueurs %}
+            <tr>
+                <td>{{ joueur.id }}</td>
+                <td>{{ joueur.nom }}</td>
+                <td>{{ joueur.prenom }}</td>
+                <td>{{ joueur.age }}</td>
+                <td>{{ joueur.nationalite }}</td>
+                <td>{{ joueur.poste }}</td>
+                <td>{{ joueur.statut }}</td>
+                <td>
+                    <a href="{{ path('joueur_show', {'id': joueur.id}) }}">show</a>
+                    <a href="{{ path('joueur_edit', {'id': joueur.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="8">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('joueur_new') }}">Create new</a> #}

@@ -32,36 +32,3 @@
         {% endfor %}
 
 {% endblock %}
-
-    {# <table class="table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Nom</th>
-                <th>Description</th>
-                <th>Categorie</th>
-                <th>actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for atelier in ateliers %}
-            <tr>
-                <td>{{ atelier.id }}</td>
-                <td>{{ atelier.nom }}</td>
-                <td>{{ atelier.description }}</td>
-                <td>{{ atelier.categorie }}</td>
-                <td>
-                    <a href="{{ path('atelier_show', {'id': atelier.id}) }}">show</a>
-                    <a href="{{ path('atelier_edit', {'id': atelier.id}) }}">edit</a>
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="5">no records found</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
-
-    <a href="{{ path('atelier_new') }}">Create new</a> #}
-
