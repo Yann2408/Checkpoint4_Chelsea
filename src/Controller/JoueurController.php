@@ -68,7 +68,7 @@ class JoueurController extends AbstractController
         ]);
     }
 
-    #[Route('/{id}', name: 'joueur_delete', methods: ['POST'])]
+    #[Route('/{id}/delete', name: 'joueur_delete', methods: ['POST'])]
     public function delete(Request $request, Joueur $joueur, EntityManagerInterface $entityManager): Response
     {
         if ($this->isCsrfTokenValid('delete'.$joueur->getId(), $request->request->get('_token'))) {

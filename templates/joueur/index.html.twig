@@ -8,7 +8,8 @@
 
 {% block body %}
     <a href="{{ path('joueur_new') }}"><button class="btn">Add a player</button></a>
-    <a href="{{ path('joueur_new') }}"><button class="btn btnChooseTeam">Choose your team</button></a>
+    <a href="{{ path('team_new') }}"><button class="btn btnChooseTeam">Make a tactic</button></a>
+    <a href="{{ path('team') }}"><button class="btn btnChooseTeam">View all your tactics</button></a>
      <div class="container">
         <div class="titreIndex">
             <div class="action">Action</div>
@@ -21,9 +22,8 @@
         {% for joueur in joueurs %}
         <div class="infos">
             <div class="action">
-            <a class="lienEdit" href="{{ path('joueur_edit', {'id': joueur.id}) }}"><i class="fas fa-edit"></i></a>
-            {{ include('joueur/_delete_form.html.twig') }}
-            <a class="lienEdit" href="{{ path('joueur_delete', {'id': joueur.id}) }}"><i class="fas fa-trash"></i></a>
+                <a class="lienEdit" href="{{ path('joueur_edit', {'id': joueur.id}) }}"><i class="fas fa-edit"></i></a>
+                {{ include('joueur/_delete_form.html.twig') }}
             </div>
             <div class="name">{{ joueur.prenom }} {{ joueur.nom }}</div>
             <div class="age">{{ joueur.age }}</div>

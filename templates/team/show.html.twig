@@ -1,0 +1,134 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="/assets/css/teamShow.css">
+{% endblock %}
+
+{% block body %}
+<h1>{{ team.nom }}</h1>
+
+<a href="{{ path('team') }}"><button class="btnBack">Back</button></a>
+
+<div class="container">
+    <div class="titulaires">
+        <div class="attaquants">
+            <div class="joueur">
+                {% if team.attaquant1 is not null %}
+                    {{ team.attaquant1.nom }}
+                {% endif %}
+            </div>
+            <div class="joueur">
+                {% if team.attaquant2 is not null %}
+                    {{ team.attaquant2.nom  }}
+                {% endif %}
+            </div>
+            <div class="joueur">
+                {% if team.attaquant3 is not null %}
+                    {{ team.attaquant3.nom  }}
+                {% endif %}
+            </div>
+        </div>   
+        <div class="milieux">
+            <div class="joueur">
+                {% if team.milieu1 is not null  %}
+                    {{ team.milieu1.nom  }}
+                {% endif %}
+            </div>
+            <div class="joueur">
+                {% if team.milieu2 is not null %}
+                    {{ team.milieu2.nom }}
+                {% endif %}
+            </div>
+            <div class="joueur">
+                {% if team.milieu3 is not null %}
+                    {{ team.milieu3.nom  }}
+                {% endif %}
+            </div>
+            <div class="joueur">
+                {% if team.milieu4 is not null %}
+                    {{ team.milieu4.nom  }}
+                {% endif %}
+            </div>
+            <div class="joueur">
+                {% if team.milieu5 is not null %}
+                    {{ team.milieu5.nom  }}
+                {% endif %}
+            </div>
+        </div>
+        <div class="defenseurs">
+            <div class="joueur">
+                {% if team.defenseur1 is not null %}
+                    {{ team.defenseur1.nom  }}
+                {% endif %}
+            </div>
+            <div class="joueur">
+                {% if team.defenseur2 is not null %}
+                    {{ team.defenseur2.nom }}
+                {% endif %}
+            </div>
+            <div class="joueur">
+                {% if team.defenseur3 is not null %}
+                    {{ team.defenseur3.nom  }}
+                {% endif %}
+            </div>
+            <div class="joueur">
+                {% if team.defenseur4 is not null %}
+                    {{ team.defenseur4.nom  }}
+                {% endif %}
+            </div>
+            <div class="joueur">
+                {% if team.defenseur5 is not null %}
+                    {{ team.defenseur5.nom  }}
+                {% endif %}
+            </div>
+        </div>
+        <div class="gardien">
+            <div class="joueur">
+                {% if team.gardien is not null %}
+                    {{ team.gardien.nom  }}
+                {% endif %}
+            </div>
+        </div>          
+    </div>
+    <div class="remplacants">
+        <h2>substitutes</h2>
+        <div class="joueur">
+            {% if team.remplacant1 is not null %}
+                {{ team.remplacant1.nom  }}
+            {% endif %}
+        </div>
+        <div class="joueur">
+            {% if team.remplacant2 is not null %}
+                {{ team.remplacant2.nom }}
+            {% endif %}
+        </div>
+        <div class="joueur">
+            {% if team.remplacant3 is not null %}
+                {{ team.remplacant3.nom  }}
+            {% endif %}
+        </div>
+        <div class="joueur">
+            {% if team.remplacant4 is not null %}
+                {{ team.remplacant4.nom  }}
+            {% endif %}
+        </div>
+        <div class="joueur">
+            {% if team.remplacant5 is not null %}
+                {{ team.remplacant5.nom  }}
+            {% endif %}
+        </div>
+        <div class="joueur">
+            {% if team.remplacant6 is not null %}
+                {{ team.remplacant6.nom  }}
+            {% endif %}
+        </div>
+        <div class="joueur">
+            {% if team.remplacant7 is not null %}
+                {{ team.remplacant7.nom  }}
+            {% endif %}
+        </div>
+    </div>     
+</div>
+{% endblock %}

@@ -17,9 +17,9 @@ class AtelierType extends AbstractType
             ->add('description')
             ->add('categorie', ChoiceType::class, [
                 'choices' => [
-                    'Technique' => 'technique',
-                    'Tactique' => 'tactique',
-                    'Physique' => 'physique',
+                    'Technical' => 'technical',
+                    'Tactical' => 'tactical',
+                    'Physical' => 'physical',
                 ]
             ])
         ;

@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="/assets/css/teamIndex.css">
+{% endblock %}
+
+{% block body %}
+    <h1>All the tactics</h1>
+    <div class="btnHaut">
+        <a href="{{ path('joueur_index') }}"><button class="btn">Back to the team</button></a>
+        <a href="{{ path('team_new') }}"><button class="btn">Add a tactic</button></a>
+    </div>
+    <div class="container">
+        <div class="titreIndex">
+            <div class="number">Number</div>
+            <div class="nom">Name</div>
+            <div class="action">Action</div>
+        </div>
+        {% for team in teams %}
+        <div class="infos">
+            <div class="number">{{ team.id }}</div>
+            <div class="nom">{{ team.nom }}</div>
+            <div class="action">
+                {# <a class="lienEdit" href="{{ path('team_edit', {'id': team.id}) }}"><i class="fas fa-edit"></i></a> #}
+                <a class="lienEdit" href="{{ path('team_show', {'id': team.id}) }}"><i class="far fa-eye"></i></a>
+                {{ include('team/_delete_form.html.twig') }}
+            </div>
+        </div>
+    </div>
+
+    {% else %}
+        <p colspan="8">You have no tactic</p>
+    {% endfor %}
+
+
+{% endblock %}

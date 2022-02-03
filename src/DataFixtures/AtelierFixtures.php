@@ -12,16 +12,16 @@ class AtelierFixtures extends Fixture
     {
         $atelier1 = new Atelier();
 
-$atelier1->setNom('Scéance vidéo');
+$atelier1->setNom('Video session');
 $atelier1->setDescription('');
-$atelier1->setCategorie('Tactique');
+$atelier1->setCategorie('Tactical');
 $this->addReference('atelier1', $atelier1);
 
 $manager->persist($atelier1);
 
 $atelier2 = new atelier();
 
-$atelier2->setNom('Placement défensif');
+$atelier2->setNom('Defensive');
 $atelier2->setDescription('');
 $atelier2->setCategorie('Tactique');
 $this->addReference('atelier2', $atelier2);

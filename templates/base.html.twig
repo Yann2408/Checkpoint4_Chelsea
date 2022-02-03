@@ -25,15 +25,12 @@
         <div class="header">
             <img class="logo" src="/uploads/Logo_Chelsea.png" alt="Logo de Chelsea">
             <div class="nav">
-                <a class="lienHome" href="{{ path('home') }}">Home</a>
+                <a class="lienHome" href="{{ path('home') }}">Calendar</a>
                 <a class="lienTraining" href="{{ path('atelier_index') }}">Training</a>
                 <a class="lienTraining" href="{{ path('joueur_index') }}">Team</a>
                 <a class="lienLogout" href="{{ path('app_logout') }}">Logout</a>
             </div>
         </div>
-        {# <a href="{{ path('index') }}">Training</a> #}
-        {# <a href="{{ path('index') }}">Team</a> #}
-
         {% endblock %}
 
         {% block body %}{% endblock %}

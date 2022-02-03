@@ -19,9 +19,8 @@
         {% for atelier in ateliers %}
         <div class="infos">
             <div class="action">
-            <a class="lienEdit" href="{{ path('atelier_edit', {'id': atelier.id}) }}"><i class="fas fa-edit"></i></a>
-            {{ include('atelier/_delete_form.html.twig') }}
-            <a class="lienEdit" href="{{ path('atelier_delete', {'id': atelier.id}) }}"><i class="fas fa-trash"></i></a>
+                <a class="lienEdit" href="{{ path('atelier_edit', {'id': atelier.id}) }}"><i class="fas fa-edit"></i></a>
+                {{ include('atelier/_delete_form.html.twig') }}
             </div>
             <div class="name">{{ atelier.nom }}</div>
             <div class="category">{{ atelier.categorie }}</div>
