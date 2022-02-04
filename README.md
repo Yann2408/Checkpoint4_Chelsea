@@ -1,6 +1,7 @@
 This project was done in 2 days during checkpoint 4 after 5 months of web developer training at the Wild Code School.
 
 Steps
+
 1-Clone the repo from Github.
 2-Run composer install
 3-Configure your .env 
