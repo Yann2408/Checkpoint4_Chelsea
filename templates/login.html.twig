@@ -13,14 +13,14 @@
     <img class="logo" src="/uploads/Logo_Chelsea.png" alt="Logo de Chelsea">
 
     <div class="container">
-        <div><i class="fas fa-user-tie"></i></div>
         <form action="{{ path('login') }}" method="post">
+        <div><i class="fas fa-futbol"></i></div>
             <div class="name">
-                <label for="username">Name:</label>
+                <label for="username">Name</label>
                 <input type="text" id="username" name="_username" value="{{ last_username }}"/>
             </div>
             <div class="mdp">
-                <label for="password">Password:</label>
+                <label for="password">Password</label>
                 <input type="password" id="password" name="_password"/>
             </div>
             {# If you want to control the URL the user is redirected to on success #}

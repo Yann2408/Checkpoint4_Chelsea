@@ -1,5 +1,6 @@
 body {
-    background-color: var(--secondary-blue);
+    background-image: url('/uploads/Stamford-Bridge.jpg');
+    background-size: cover;
 }
 
 .logo {
@@ -27,18 +28,24 @@ form {
 
 .fas {
     font-size: 100px;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
+    color: white;
 }
 
 .name, .mdp {
     margin-bottom: 10px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
 }
 
 label {
     font-size: 20px;
     font-weight: bold;
+    color: white;
 }
 
 input {
@@ -48,6 +55,11 @@ input {
     width: 500px;
     height: 40px;
     background-color: white;
+    border: none;
+    background: transparent;
+    border-bottom: 4px solid white;
+    color: white;
+    outline: none;
 }
 
 .btn {

@@ -2,10 +2,14 @@
 
 {% block title %}New Joueur{% endblock %}
 
+{% block stylesheets %}
+    <link rel="stylesheet" href="/assets/css/formJoueur.css">
+{% endblock %}
+
 {% block body %}
-    <h1>Create new Joueur</h1>
+    <h1>Add a new player</h1>
 
     {{ include('joueur/_form.html.twig') }}
 
-    <a href="{{ path('joueur_index') }}">back to list</a>
+     <a href="{{ path('joueur_index') }}"><button class="btnBack">back to list</button></a>
 {% endblock %}
