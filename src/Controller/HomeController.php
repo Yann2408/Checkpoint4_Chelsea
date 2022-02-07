@@ -9,7 +9,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class HomeController extends AbstractController
 {
-    #[Route('/', name: 'home')]
+    #[Route('admin/home', name: 'home')]
     public function index(CalendarRepository $calendar): Response
     {
         $events = $calendar->findAll();

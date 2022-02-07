@@ -50,6 +50,11 @@ h1 {
     align-items: center;
 }
 
+.btnDelete {
+    background-color: white;
+    border: none;
+}
+
 .name {
     width: 30%;
     display: flex;

@@ -16,21 +16,22 @@
             <div class="nom">Name</div>
             <div class="action">Action</div>
         </div>
+
         {% for team in teams %}
         <div class="infos">
             <div class="number">{{ team.id }}</div>
             <div class="nom">{{ team.nom }}</div>
             <div class="action">
-                {# <a class="lienEdit" href="{{ path('team_edit', {'id': team.id}) }}"><i class="fas fa-edit"></i></a> #}
+                <a class="lienEdit" href="{{ path('team_edit', {'id': team.id}) }}"><i class="fas fa-edit"></i></a>
                 <a class="lienEdit" href="{{ path('team_show', {'id': team.id}) }}"><i class="far fa-eye"></i></a>
                 {{ include('team/_delete_form.html.twig') }}
             </div>
         </div>
-    </div>
-
+   
     {% else %}
         <p colspan="8">You have no tactic</p>
     {% endfor %}
+    </div>
 
 
 {% endblock %}

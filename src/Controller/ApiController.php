@@ -11,7 +11,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class ApiController extends AbstractController
 {
-    #[Route('/api', name: 'api')]
+    #[Route('admin/api', name: 'api')]
     public function index(): Response
     {
         return $this->render('api/index.html.twig', [

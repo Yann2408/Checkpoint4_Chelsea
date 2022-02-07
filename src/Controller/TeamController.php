@@ -10,10 +10,10 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-
+#[Route('admin/team')]
 class TeamController extends AbstractController
 {
-    #[Route('/team', name: 'team')]
+    #[Route('/', name: 'team')]
     public function index(TeamRepository $teamRepository): Response
     {
        
@@ -22,7 +22,7 @@ class TeamController extends AbstractController
         ]);
     }
 
-    #[Route('/team/new', name: 'team_new', methods: ['GET', 'POST'])]
+    #[Route('/new', name: 'team_new', methods: ['GET', 'POST'])]
     public function new(Request $request, EntityManagerInterface $entityManager): Response
     {
         $team = new Team();
@@ -33,7 +33,7 @@ class TeamController extends AbstractController
             $entityManager->persist($team);
             $entityManager->flush();
 
-            return $this->redirectToRoute('team_index', [], Response::HTTP_SEE_OTHER);
+            return $this->redirectToRoute('team', [], Response::HTTP_SEE_OTHER);
         }
 
         return $this->render('team/new.html.twig', [

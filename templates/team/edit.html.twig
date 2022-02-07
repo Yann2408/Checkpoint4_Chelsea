@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="/assets/css/TeamNew.css">
+{% endblock %}
+
+{% block body %}
+    <h1>Edit the tactic</h1>
+
+    {{ include('team/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('team') }}"><button class="btnBack">back to list</button></a>
+
+{% endblock %}
