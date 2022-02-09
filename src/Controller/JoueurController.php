@@ -11,7 +11,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-#[Route('/joueur')]
+#[Route('admin/joueur')]
 class JoueurController extends AbstractController
 {
     #[Route('/', name: 'joueur_index', methods: ['GET'])]
@@ -53,6 +53,7 @@ class JoueurController extends AbstractController
     #[Route('/{id}/edit', name: 'joueur_edit', methods: ['GET', 'POST'])]
     public function edit(Request $request, Joueur $joueur, EntityManagerInterface $entityManager): Response
     {
+        dd($joueur);
         $form = $this->createForm(JoueurType::class, $joueur);
         $form->handleRequest($request);
 

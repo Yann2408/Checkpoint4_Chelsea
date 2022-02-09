@@ -53,13 +53,14 @@ class TeamController extends AbstractController
     #[Route('/{id}/edit', name: 'team_edit', methods: ['GET', 'POST'])]
     public function edit(Request $request, Team $team, EntityManagerInterface $entityManager): Response
     {
+        // dd($team);
         $form = $this->createForm(TeamType::class, $team);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
             $entityManager->flush();
 
-            return $this->redirectToRoute('team_index', [], Response::HTTP_SEE_OTHER);
+            return $this->redirectToRoute('team', [], Response::HTTP_SEE_OTHER);
         }
 
         return $this->renderForm('team/edit.html.twig', [
