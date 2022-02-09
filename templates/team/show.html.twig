@@ -9,8 +9,6 @@
 {% block body %}
 <h1>{{ team.nom }}</h1>
 
-<a href="{{ path('team') }}"><button class="btnBack">Back</button></a>
-
 <div class="container">
     <div class="titulaires">
         <div class="attaquants">
@@ -131,4 +129,6 @@
         </div>
     </div>     
 </div>
+
+<a href="{{ path('team') }}"><button class="btnBack">Back</button></a>
 {% endblock %}
