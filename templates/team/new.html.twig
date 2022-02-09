@@ -9,8 +9,8 @@
 {% block body %}
     <h1>Select your players</h1> 
 
-    <a href="{{ path('team') }}"><button class="btnBack">Back to list</button></a>
-
     {{ include('team/_form.html.twig') }}
 
+    <a href="{{ path('team') }}"><button class="btnBack">Back to list</button></a>
+    
 {% endblock %}
