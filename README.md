@@ -13,5 +13,5 @@ This project was done in 2 days during checkpoint 4 after 5 months of web develo
 6. Run a server with "symfony server:start -d"
 
 ### identifiers:
-    . Name: Thomas Tuchel
-    . Password: 781
+    Name: Thomas Tuchel
+    Password: 781
